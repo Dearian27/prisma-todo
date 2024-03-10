@@ -1,0 +1,32 @@
+.form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  align-self: center;
+  bottom: 100px;
+
+  .input {
+    padding: 10px 20px;
+    border: lightgrey solid 1px;
+    border-radius: 10px;
+    font-size: 22px;
+    // font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+
+  .button {
+    padding: 10px 20px;
+    border: lightgrey solid 1px;
+    border-radius: 10px;
+    font-size: 22px;
+    background-color: transparent;
+    color: lightslategray;
+    cursor: pointer;
+    transition: 0.5s;
+    &:hover {
+      color: #535d67;
+      background-color: rgb(226, 226, 226);
+    }
+  }
+}

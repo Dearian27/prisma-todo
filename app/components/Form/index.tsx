@@ -2,14 +2,20 @@
 import React, { useState } from "react";
 import styles from "./styles.module.scss";
 import { createPost } from "@/app/actions/action";
+import axios from "axios";
 
 const Form = () => {
   const [author, setAuthor] = useState("");
   const [content, setContent] = useState("");
 
   const submit = async () => {
-    const result = await createPost({ author, content });
-    console.log(result);
+    const res = await axios.post("/api/posts/create", {
+      author,
+      content,
+    });
+    console.log(res);
+    // const result = await createPost({ author, content });
+    // console.log(result);
   };
   return (
     <div className={styles.form}>
